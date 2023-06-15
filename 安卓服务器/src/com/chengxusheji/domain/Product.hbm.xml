@@ -1,0 +1,68 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Product" table="Product">
+
+          <!-- 主键商品编号 -->
+          <id name="productNo" type="string" length="20">
+            <generator class="assigned"/>
+          </id>
+
+          <!-- 多对一属性: 商品类目 -->
+          <many-to-one name="productClassObj"
+            column="productClassObj"
+            class="ProductClass"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 商品名称 -->
+          <property
+            name="productName"
+            column="productName"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 物品描述 -->
+          <property
+            name="productDesc"
+            column="productDesc"
+            type="string"
+            length="5000"
+          />
+
+          <!-- 简单浮点型属性: 物品价格 -->
+          <property
+            name="price"
+            column="price"
+            type="float"
+          />
+
+          <!-- 简单图片属性: 物品图片 -->
+          <property
+            name="productPhoto"
+            column="productPhoto"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单字符串属性: 物品存货 -->
+          <property
+            name="stockDesc"
+            column="stockDesc"
+            type="string"
+            length="50"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F5F5F5"
+    android:orientation="vertical" >
+    <include layout="@layout/title" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/TV_sellUserName"
+                    android:text="商家账号："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/hint_color" /> 
+                <EditText
+                    android:id="@+id/ET_sellUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_sellUserName"
+                    android:layout_alignBottom="@+id/TV_sellUserName"
+                    android:background="@drawable/btn_item_medium_default"
+
+                    android:drawableLeft="@drawable/ic_user_info"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_password" 
+                    android:text="登录密码："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_sellUserName"
+                    android:layout_alignLeft="@id/TV_sellUserName"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_password" 
+                    android:layout_alignBottom="@id/TV_password"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_sellerName" 
+                    android:text="商家名称："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_password"
+                    android:layout_alignLeft="@id/TV_password"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_sellerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_sellerName" 
+                    android:layout_alignBottom="@id/TV_sellerName"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_telephone" 
+                    android:text="联系电话："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_sellerName"
+                    android:layout_alignLeft="@id/TV_sellerName"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_telephone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_telephone" 
+                    android:layout_alignBottom="@id/TV_telephone"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_addDate" 
+                    android:text="入驻日期："
+					android:layout_height="140dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_telephone"
+                    android:layout_alignLeft="@id/TV_telephone"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <DatePicker
+					android:id="@+id/dp_addDate"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/TV_addDate"
+					android:layout_alignTop="@id/TV_addDate"
+					android:layout_gravity="left"
+					android:layout_marginTop="5dip"  />
+                <TextView
+                    android:id="@+id/TV_address" 
+                    android:text="商家地址："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_addDate"
+                    android:layout_alignLeft="@id/TV_addDate"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_address" 
+                    android:layout_alignBottom="@id/TV_address"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_latitude" 
+                    android:text="纬度："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_address"
+                    android:layout_alignLeft="@id/TV_address"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_latitude"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_latitude"
+                    android:layout_alignBottom="@id/TV_latitude"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_longitude" 
+                    android:text="经度："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_latitude"
+                    android:layout_alignLeft="@id/TV_latitude"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_longitude"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_longitude"
+                    android:layout_alignBottom="@id/TV_longitude"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+            </RelativeLayout>
+            <Button
+            	android:text="添加"
+            	android:id="@+id/BtnAdd"
+            	android:layout_width="match_parent"
+            	android:layout_height="48dp"
+            	android:layout_marginLeft="10dip"
+            	android:layout_marginRight="10dip"
+            	android:layout_marginTop="20dip"
+            	android:background="#D64F4D"
+            	android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+
+

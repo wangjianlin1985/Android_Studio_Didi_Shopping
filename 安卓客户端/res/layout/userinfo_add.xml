@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F5F5F5"
+    android:orientation="vertical" >
+    <include layout="@layout/title" />
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/TV_user_name"
+                    android:text="用户名："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/hint_color" /> 
+                <EditText
+                    android:id="@+id/ET_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_user_name"
+                    android:layout_alignBottom="@+id/TV_user_name"
+                    android:background="@drawable/btn_item_medium_default"
+
+                    android:drawableLeft="@drawable/ic_user_info"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_password" 
+                    android:text="登录密码："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_user_name"
+                    android:layout_alignLeft="@id/TV_user_name"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_password" 
+                    android:layout_alignBottom="@id/TV_password"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_name" 
+                    android:text="姓名："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_password"
+                    android:layout_alignLeft="@id/TV_password"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_name" 
+                    android:layout_alignBottom="@id/TV_name"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_sex" 
+                    android:text="性别："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_name"
+                    android:layout_alignLeft="@id/TV_name"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_sex" 
+                    android:layout_alignBottom="@id/TV_sex"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_birthDate" 
+                    android:text="出生日期："
+					android:layout_height="140dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_sex"
+                    android:layout_alignLeft="@id/TV_sex"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <DatePicker
+					android:id="@+id/dp_birthDate"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/TV_birthDate"
+					android:layout_alignTop="@id/TV_birthDate"
+					android:layout_gravity="left"
+					android:layout_marginTop="5dip"  />
+                <TextView
+                    android:id="@+id/TV_userImage" 
+                    android:text="用户照片："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_birthDate"
+                    android:layout_alignLeft="@id/TV_birthDate"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <ImageView android:id="@+id/iv_userImage" 
+                	android:layout_width="150dp"
+                	android:layout_height="150dp"
+                	android:layout_toRightOf="@id/TV_userImage"
+                	android:layout_alignTop="@id/TV_userImage"
+                	android:layout_marginTop="5dip"
+                	android:src="@drawable/noimage" />
+                <Button 
+                	android:text="拍照"
+                	android:id="@+id/btn_userImage"
+                	android:layout_width="match_parent" 
+                	android:layout_height="wrap_content"
+                	android:layout_below="@id/iv_userImage"
+                	android:layout_alignParentLeft="true"
+                	android:layout_marginTop="5dip"
+                	android:textColor="@color/hint_color" />
+                <TextView
+                    android:id="@+id/TV_qq" 
+                    android:text="用户qq："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/btn_userImage"
+                    android:layout_alignLeft="@id/btn_userImage"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_qq"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_qq" 
+                    android:layout_alignBottom="@id/TV_qq"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_email" 
+                    android:text="邮箱："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_qq"
+                    android:layout_alignLeft="@id/TV_qq"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_email" 
+                    android:layout_alignBottom="@id/TV_email"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_regTime" 
+                    android:text="注册时间："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_email"
+                    android:layout_alignLeft="@id/TV_email"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"
+                    android:visibility="gone"/>
+
+                <EditText
+                    android:id="@+id/ET_regTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_regTime" 
+                    android:layout_alignBottom="@id/TV_regTime"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+                <TextView
+                    android:id="@+id/TV_address" 
+                    android:text="用户地址："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_regTime"
+                    android:layout_alignLeft="@id/TV_regTime"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_address" 
+                    android:layout_alignBottom="@id/TV_address"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_latitude" 
+                    android:text="纬度："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_address"
+                    android:layout_alignLeft="@id/TV_address"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"
+                     android:visibility="gone"/>
+
+                <EditText
+                    android:id="@+id/ET_latitude"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_latitude"
+                    android:layout_alignBottom="@id/TV_latitude"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true"
+                     android:visibility="gone" />
+                <TextView
+                    android:id="@+id/TV_longitude" 
+                    android:text="经度："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_latitude"
+                    android:layout_alignLeft="@id/TV_latitude"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"
+                     android:visibility="gone"/>
+
+                <EditText
+                    android:id="@+id/ET_longitude"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_longitude"
+                    android:layout_alignBottom="@id/TV_longitude"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true"
+                     android:visibility="gone" />
+            </RelativeLayout>
+            <com.baidu.mapapi.map.MapView  
+				    android:id="@+id/bmapView"  
+				    android:layout_width="fill_parent"  
+				    android:layout_height="350dp"  
+				    android:clickable="true"  />
+            <Button
+            	android:text="注册"
+            	android:id="@+id/BtnAdd"
+            	android:layout_width="match_parent"
+            	android:layout_height="48dp"
+            	android:layout_marginLeft="10dip"
+            	android:layout_marginRight="10dip"
+            	android:layout_marginTop="20dip"
+            	android:background="#D64F4D"
+            	android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+
+

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+	body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=uOqdzZgQFY83xmQ4bqIQlixR"></script>
+<title>marker演示</title>  
+ <script language="javascript">
+ 
+ BMap.Point.prototype.toString = function(){
+	 return "经度=" + this.lng + ",纬度=" + this.lat;
+ }
+ 
+ function InitMap() {
+	 
+    // 百度地图API功能
+	var map = new BMap.Map("allmap"); 
+	var point = new BMap.Point(120.655094,31.308261);   //苏州大学的经纬度点
+	map.centerAndZoom(point, 15);
+	map.enableScrollWheelZoom(); 
+	
+	 
+	
+
+	map.addEventListener("click",function(event) { 
+	 
+		alert(event.point);		
+	});
+
+ 
+	 
+	
+	
+ }
+ </script>
+</head>
+<body onload="InitMap();">
+	<div id="allmap"></div>
+</body>
+</html>

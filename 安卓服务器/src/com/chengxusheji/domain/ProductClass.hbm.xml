@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="ProductClass" table="ProductClass">
+
+          <!-- 主键类别编号 -->
+          <id name="classId" column="classId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 类别名称 -->
+          <property
+            name="className"
+            column="className"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单日期型属性: 添加日期 -->
+          <property
+            name="addTime"
+            column="addTime"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 简单字符串属性: 类别描述 -->
+          <property
+            name="classDesc"
+            column="classDesc"
+            type="string"
+            length="2000"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 
